@@ -264,6 +264,7 @@ class ComposerStaticInitee4435585e70f9b2bc81c0954459faa9
     );
 
     public static $classMap = array (
+        'Article' => __DIR__ . '/../..' . '/database/seeds/Article.php',
         'ArticleSeeder' => __DIR__ . '/../..' . '/database/seeds/ArticleSeeder.php',
         'CreateArticleTalbe' => __DIR__ . '/../..' . '/database/migrations/2016_08_10_072443_create_article_talbe.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
