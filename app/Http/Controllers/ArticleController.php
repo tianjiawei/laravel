@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
-class HomeController extends Controller
+use DB;
+class ArticleController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -22,9 +22,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function show( $id = 0)
     {
-	    //throw new \Exception("我故意的", 1);
-        return view('home')->withArticles(\App\Article::all());
+        //throw new \Exception("我故意的", 1);
+        //$data = Article::find($id);
+        
+        $data = DB::table("articles")->where('id', $id)->first();
+        return view('article.show')->withArticle($data);
     }
 }

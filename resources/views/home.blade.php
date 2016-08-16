@@ -1,17 +1,20 @@
-@extends('header')
-<div id="content">
+@extends('layouts.header')
+
+@section('content')
+<div id="container center-block">
     <ul>
         @foreach ($articles as $article)
-        <li style="margin: 50px 0;">
-            <div class="title">
-                <a href="{{ url('article/'.$article->id) }}">
-                    <h4>{{ $article->title }}</h4>
-                </a>
+            <div class="panel col-md-10 col-md-offset-1">
+                <div class="panel-heading">
+                    <a href="{{ url('article/'.$article->id) }}">
+                        <h3>{{ $article->title }}</h3>
+                    </a>
+                </div>
+                <div class="panel-body">
+                    <p>{{ $article->body }}</p>
+                </div>
             </div>
-            <div class="body">
-                <p>{{ $article->body }}</p>
-            </div>
-        </li>
         @endforeach
     </ul>
 </div>
+@endsection

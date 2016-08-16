@@ -11,9 +11,9 @@
     <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="//cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
-<body>
-<div id="title" style="text-align: center;">
-    <h1>田佳伟的博客</h1>
+<body class="bg-warning">
+<div class="page-header text-center">
+    <h1>田佳伟的博客 <small>个人博客</small></h1>
     <div style="padding: 5px; font-size: 16px;">开发中，敬请期待……</div>
 </div>
-<hr>
+@yield('content')
