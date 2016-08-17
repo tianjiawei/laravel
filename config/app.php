@@ -156,6 +156,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Ender\UEditor\UEditorServiceProvider::class, // uedit
     ],
 
     /*
@@ -202,6 +203,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'UEditor'   => Ender\UEditor\UEditor::class, // uedit
     ],
 
 ];
