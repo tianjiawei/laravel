@@ -15,14 +15,14 @@
                         </div>
                     @endif
 
-                    <form action="{{ url('admin/article') }}" method="POST">
+                    <form action="{{ url('admin/articles') }}" method="POST">
                         {!! csrf_field() !!}
                         <input type="text" name="title" class="form-control" required="required" placeholder="请输入标题">
                         <br>
                         {{--<textarea name="body" rows="10" class="form-control" required="required" placeholder="请输入内容"></textarea>--}}
                         {!! UEditor::css() !!} {{--输出UEditor的css--}}
-                        {{--初始化编辑器容器--}}
-                        {!! UEditor::content() !!}
+                        {{--初始化编辑器容器(参数1 id，参数2 name，参数3 content  默认 ueditor)--}}
+                        {!! UEditor::content('body', 'body') !!}
                         {{--输出对应的js--}}
                         {!! UEditor::js() !!}
                         <br>
@@ -36,7 +36,7 @@
 </div>
 <script type="text/javascript">
 
-    var ue = UE.getEditor('ueditor'); //用辅助方法生成的话默认id是ueditor
+    var ue = UE.getEditor('body'); //用辅助方法生成的话 id 可以自定义
 
     /* 自定义路由 */
     /*

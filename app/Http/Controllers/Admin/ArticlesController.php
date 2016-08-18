@@ -8,14 +8,14 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Article;
 
-class ArticleController extends Controller
+class ArticlesController extends Controller
 {
     public function index() {
-        return view('admin/article/index')->withArticles(Article::all());
+        return view('admin/articles/index')->withArticles(Article::all());
     }
 
     public function create() {
-        return view('admin/article/create');
+        return view('admin/articles/create');
     }
 	
     public function store(Request $request) {
@@ -30,9 +30,13 @@ class ArticleController extends Controller
         $article->user_id = $request->user()->id;
 
         if ($article->save()) {
-            return redirect('admin/article');
+            return redirect('admin/articles');
         } else {
             return redirect()->back()->withInput()->withErrors('保存失败！');
         }
+    }
+
+    public function show() {
+
     }
 }

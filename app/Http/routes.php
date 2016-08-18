@@ -21,8 +21,14 @@ Route::auth();
 
 Route::get('/', 'HomeController@index');
 
+Route::resource('article', 'HomeController');
+
 Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin'], function() {
     Route::get('/', 'HomeController@index');
-    //Route::get('article', 'ArticleController@index');
-    Route::resource('article', 'ArticleController');
+    Route::get('articles', 'ArticlesController@index');
+    Route::resource('articles', 'ArticlesController');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
