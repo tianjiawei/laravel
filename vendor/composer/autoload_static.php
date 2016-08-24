@@ -23,6 +23,10 @@ class ComposerStaticInitee4435585e70f9b2bc81c0954459faa9
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Y' => 
+        array (
+            'YuanChao\\Editor\\' => 16,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -72,10 +76,6 @@ class ComposerStaticInitee4435585e70f9b2bc81c0954459faa9
         array (
             'Faker\\' => 6,
         ),
-        'E' => 
-        array (
-            'Ender\\UEditor\\' => 14,
-        ),
         'D' => 
         array (
             'Dotenv\\' => 7,
@@ -98,6 +98,10 @@ class ComposerStaticInitee4435585e70f9b2bc81c0954459faa9
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+        ),
+        'YuanChao\\Editor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yuanchao/laravel-5-markdown-editor/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -198,10 +202,6 @@ class ComposerStaticInitee4435585e70f9b2bc81c0954459faa9
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
-        ),
-        'Ender\\UEditor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/ender/laravel-ueditor/src',
         ),
         'Dotenv\\' => 
         array (

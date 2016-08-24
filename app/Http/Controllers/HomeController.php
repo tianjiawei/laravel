@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use EndaEditor;
 
 class HomeController extends Controller
 {
@@ -31,6 +32,7 @@ class HomeController extends Controller
     public function show($id = 0) {
         $article = DB::table('articles')->where('id', $id)->first();
         //r_dump($article);exit;
+        $str = EndaEditor::MarkDecode("#我是markdown语法");
         return view('article')->with('article', $article);
     }
 }

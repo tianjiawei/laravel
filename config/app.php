@@ -155,8 +155,10 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
-        Ender\UEditor\UEditorServiceProvider::class, // uedit
+        /*
+         * Marckdown edit
+         */
+        YuanChao\Editor\EndaEditorServiceProvider::class,
     ],
 
     /*
@@ -202,8 +204,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
-        'UEditor'   => Ender\UEditor\UEditor::class, // uedit
+        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class,
     ],
 
 ];

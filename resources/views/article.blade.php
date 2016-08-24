@@ -7,7 +7,7 @@
         </h1>
         <br/>
         <p class="lead">
-            {!! html_entity_decode($article->body) !!}
+            {!! EndaEditor::MarkDecode($article->body) !!}
         </p>
     </div>
 @endsection
